@@ -18,4 +18,15 @@ public class LoopMetoder {
         }
         return minPerson;
     }
+
+    public Person findMaximum(Person[] personer){
+        Person maxPerson = personer[0];
+
+        for (Person person : personer){
+            if (person.getPoint() > maxPerson.getPoint()){
+                maxPerson = person;
+            }
+        }
+        return maxPerson;
+    }
 }

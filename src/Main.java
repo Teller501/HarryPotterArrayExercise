@@ -42,6 +42,11 @@ public class Main {
         System.out.println("Det samlede antal point: " + totalPoints);
 
         Person minPerson = loopMetoder.findMinimum(personer);
-        System.out.println(minPerson.getFirstName() + " " + minPerson.getLastName() + " har mindst point med hele " + minPerson.getPoint() + " point");
+        System.out.println(minPerson.getFirstName() + " " + minPerson.getLastName() + " har mindst point med hele "
+                + minPerson.getPoint() + " point");
+
+        Person maxPerson = loopMetoder.findMaximum(personer);
+        System.out.println(maxPerson.getFirstName() + " " + maxPerson.getLastName() + " har flest point med hele "
+                + maxPerson.getPoint() + " point");
     }
 }
