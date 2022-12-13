@@ -33,6 +33,10 @@ public class Person {
         this.point = point;
     }
 
+    public void addPoints(int point){
+        this.point += point;
+    }
+
     @Override
     public String toString() {
         return firstName + " " + lastName + " har " + point + " point";
