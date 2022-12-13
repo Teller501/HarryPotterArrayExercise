@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Person harry = new Person("Harry", "Potter");
@@ -11,5 +13,9 @@ public class Main {
         System.out.println(harry);
         System.out.println(ron);
         System.out.println(hermione);
+
+        Person[] personer = {harry,ron,hermione};
+
+        System.out.println(Arrays.toString(personer));
     }
 }
