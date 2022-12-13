@@ -48,5 +48,8 @@ public class Main {
         Person maxPerson = loopMetoder.findMaximum(personer);
         System.out.println(maxPerson.getFirstName() + " " + maxPerson.getLastName() + " har flest point med hele "
                 + maxPerson.getPoint() + " point");
+
+        int average = loopMetoder.calculateAverage(personer);
+        System.out.println("Gennemsnits point: " + average);
     }
 }

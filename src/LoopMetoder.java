@@ -29,4 +29,11 @@ public class LoopMetoder {
         }
         return maxPerson;
     }
+
+    public int calculateAverage(Person[] personer){
+        int total = calculateTotalPoints(personer);
+        int avereage = total / personer.length;
+
+        return avereage;
+    }
 }
