@@ -14,8 +14,13 @@ public class Main {
         System.out.println(ron);
         System.out.println(hermione);
 
-        Person[] personer = {harry,ron,hermione};
+        Person[] personer = {harry,ron,hermione}; //Array of Person objects
 
         System.out.println(Arrays.toString(personer));
+
+        // Enhanched for-loop
+        for (Person person : personer){
+            System.out.println(person);
+        }
     }
 }
