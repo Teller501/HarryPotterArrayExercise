@@ -51,5 +51,8 @@ public class Main {
 
         int average = loopMetoder.calculateAverage(personer);
         System.out.println("Gennemsnits point: " + average);
+
+        Person firstNameResult = loopMetoder.findByFirstName(personer, "ron");
+        System.out.println(firstNameResult.getFirstName() + " " + firstNameResult.getLastName());
     }
 }

@@ -36,4 +36,14 @@ public class LoopMetoder {
 
         return avereage;
     }
+
+    public Person findByFirstName(Person[] personer, String searchTerm){
+        Person foundPerson = null;
+        for (Person person : personer){
+            if (searchTerm.toLowerCase().contains(person.getFirstName().toLowerCase())){
+                foundPerson = person;
+            }
+        }
+        return foundPerson;
+    }
 }
