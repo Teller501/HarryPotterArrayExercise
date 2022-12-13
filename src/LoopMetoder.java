@@ -46,4 +46,14 @@ public class LoopMetoder {
         }
         return foundPerson;
     }
+
+    public Person findByLastName(Person[] personer, String searchTerm){
+        Person foundPerson = null;
+        for (Person person : personer){
+            if (searchTerm.toLowerCase().contains(person.getLastName().toLowerCase())){
+                foundPerson = person;
+            }
+        }
+        return foundPerson;
+    }
 }

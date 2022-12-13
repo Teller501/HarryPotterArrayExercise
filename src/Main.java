@@ -54,5 +54,8 @@ public class Main {
 
         Person firstNameResult = loopMetoder.findByFirstName(personer, "ron");
         System.out.println(firstNameResult.getFirstName() + " " + firstNameResult.getLastName());
+
+        Person lastNameResult = loopMetoder.findByLastName(personer, "granger");
+        System.out.println(lastNameResult.getFirstName() + " " + lastNameResult.getLastName());
     }
 }
