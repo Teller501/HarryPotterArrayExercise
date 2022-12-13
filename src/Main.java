@@ -2,6 +2,8 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+        LoopMetoder loopMetoder = new LoopMetoder();
+
         Person harry = new Person("Harry", "Potter");
         Person ron = new Person("Ron", "Weasley");
         Person hermione = new Person("Hermione", "Granger");
@@ -34,5 +36,9 @@ public class Main {
         for (Person person : personer){
             System.out.println(person);
         }
+
+        int totalPoints = loopMetoder.calculateTotalPoints(personer);
+
+        System.out.println("Det samlede antal point: " + totalPoints);
     }
 }
