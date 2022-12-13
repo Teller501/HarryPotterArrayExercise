@@ -1,6 +1,9 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class LoopMetoder {
 
-    public int calculateTotalPoints(Person[] personer){
+    public int calculateTotalPoints(ArrayList<Person> personer){
         int totalPoint = 0;
         for (Person person : personer){
             totalPoint += person.getPoint();
@@ -8,8 +11,8 @@ public class LoopMetoder {
         return totalPoint;
     }
 
-    public Person findMinimum(Person[] personer){
-        Person minPerson = personer[0];
+    public Person findMinimum(ArrayList<Person> personer){
+        Person minPerson = personer.get(0);
 
         for (Person person : personer){
             if (person.getPoint() < minPerson.getPoint()){
@@ -19,8 +22,8 @@ public class LoopMetoder {
         return minPerson;
     }
 
-    public Person findMaximum(Person[] personer){
-        Person maxPerson = personer[0];
+    public Person findMaximum(ArrayList<Person> personer){
+        Person maxPerson = personer.get(0);
 
         for (Person person : personer){
             if (person.getPoint() > maxPerson.getPoint()){
@@ -30,14 +33,14 @@ public class LoopMetoder {
         return maxPerson;
     }
 
-    public int calculateAverage(Person[] personer){
+    public int calculateAverage(ArrayList<Person> personer){
         int total = calculateTotalPoints(personer);
-        int avereage = total / personer.length;
+        int avereage = total / personer.size();
 
         return avereage;
     }
 
-    public Person findByFirstName(Person[] personer, String searchTerm){
+    public Person findByFirstName(ArrayList<Person> personer, String searchTerm){
         Person foundPerson = null;
         for (Person person : personer){
             if (searchTerm.toLowerCase().contains(person.getFirstName().toLowerCase())){
@@ -47,7 +50,7 @@ public class LoopMetoder {
         return foundPerson;
     }
 
-    public Person findByLastName(Person[] personer, String searchTerm){
+    public Person findByLastName(ArrayList<Person> personer, String searchTerm){
         Person foundPerson = null;
         for (Person person : personer){
             if (searchTerm.toLowerCase().contains(person.getLastName().toLowerCase())){
@@ -57,7 +60,7 @@ public class LoopMetoder {
         return foundPerson;
     }
 
-    public Person findByName(Person[] personer, String searchTerm){
+    public Person findByName(ArrayList<Person> personer, String searchTerm){
         Person foundPerson = null;
         for (Person person : personer){
             if (searchTerm.toLowerCase().contains(person.getFirstName().toLowerCase() + " " + person.getLastName().toLowerCase())){

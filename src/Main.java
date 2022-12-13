@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,15 +24,10 @@ public class Main {
         System.out.println(ron);
         System.out.println(hermione);
 
-        Person[] personer = new Person[5]; //Array of Person objects
-        personer[0] = harry;
-        personer[2] = ron;
-        personer[3] = hermione;
-        personer[1] = ginny;
-        personer[4] = draco;
-        personer[4] = neville;
+        ArrayList<Person> personer = new ArrayList<>(); //Array of Person objects
+        Collections.addAll(personer, harry, ron, hermione, ginny, draco, neville);
 
-        System.out.println(Arrays.toString(personer));
+        System.out.println(personer);
 
         // Enhanched for-loop
         for (Person person : personer){
