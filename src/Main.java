@@ -40,5 +40,8 @@ public class Main {
         int totalPoints = loopMetoder.calculateTotalPoints(personer);
 
         System.out.println("Det samlede antal point: " + totalPoints);
+
+        Person minPerson = loopMetoder.findMinimum(personer);
+        System.out.println(minPerson.getFirstName() + " " + minPerson.getLastName() + " har mindst point med hele " + minPerson.getPoint() + " point");
     }
 }

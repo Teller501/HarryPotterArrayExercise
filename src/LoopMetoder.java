@@ -7,4 +7,15 @@ public class LoopMetoder {
         }
         return totalPoint;
     }
+
+    public Person findMinimum(Person[] personer){
+        Person minPerson = personer[0];
+
+        for (Person person : personer){
+            if (person.getPoint() < minPerson.getPoint()){
+                minPerson = person;
+            }
+        }
+        return minPerson;
+    }
 }
